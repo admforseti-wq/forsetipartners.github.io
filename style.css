@@ -7,7 +7,8 @@ body {
 }
 .hero {
   position: relative;
-  height: 100vh;
+  height: 80vh;
+  min-height: 400px;
   overflow: hidden;
 }
 .hero-bg {
@@ -18,22 +19,35 @@ body {
   top: 0;
   left: 0;
   z-index: 1;
-  opacity: 0.2;
+  opacity: 0.22;
 }
 .hero-content {
   position: relative;
   z-index: 2;
-  top: 40%;
+  top: 38%;
   transform: translateY(-50%);
+}
+.hero-content h1 {
+  font-size: 2.8em;
+  margin-bottom: 8px;
+}
+.hero-content p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
 }
 .buttons a {
   background-color: #fbbf24;
-  color: black;
-  padding: 12px 20px;
+  color: #00203f;
+  padding: 12px 22px;
   margin: 10px;
-  border-radius: 5px;
+  border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
+  font-size: 1em;
+  transition: background 0.2s;
+}
+.buttons a:hover {
+  background-color: #f59e08;
 }
 .sobre, .diferenciais {
   padding: 50px 20px;
@@ -42,16 +56,24 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
+  gap: 16px;
 }
 .grid div {
-  background-color: #1e3a8a;
-  padding: 15px 25px;
-  border-radius: 8px;
+  background-color: #19376d;
+  padding: 15px 28px;
+  border-radius: 10px;
   font-weight: bold;
+  font-size: 1em;
 }
 footer {
   background-color: #081c36;
   padding: 20px;
-  font-size: 0.9em;
+  font-size: 0.95em;
+  margin-top: 35px;
+}
+/* Responsivo para mobile */
+@media (max-width: 600px) {
+  .hero-content h1 { font-size: 2em; }
+  .grid { flex-direction: column; gap: 10px; }
+  .hero { height: 320px; }
 }
