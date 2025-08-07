@@ -3,19 +3,25 @@ body {
   font-family: 'Inter', Arial, sans-serif;
   background: #1c2334;
   color: #fff;
+  scroll-behavior: smooth;
 }
+
 .topbar {
+  position: fixed;
+  top: 0; left: 0; width: 100vw;
+  background: rgba(28,35,52,0.95);
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 24px 48px 12px 48px;
-  background: transparent;
+  z-index: 100;
+  gap: 22px;
+  padding: 16px 48px 14px 48px;
+  box-shadow: 0 2px 18px #131b2a22;
 }
 .logo-topo {
-  width: 52px;
-  height: 52px;
+  width: 50px;
+  height: 50px;
   object-fit: contain;
-  opacity: 0.96;
+  opacity: 0.98;
 }
 .brand {
   font-family: 'Playfair Display', serif;
@@ -23,17 +29,36 @@ body {
   font-weight: 700;
   color: #eac87b;
   letter-spacing: 2px;
-  margin-top: 3px;
+}
+.topbar nav {
+  margin-left: auto;
+  display: flex;
+  gap: 36px;
+}
+.topbar nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.05em;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: color 0.18s;
+  padding: 5px 0;
+  border-bottom: 2px solid transparent;
+}
+.topbar nav a:hover, .topbar nav a.active {
+  color: #eac87b;
+  border-bottom: 2px solid #eac87b;
 }
 
 .hero {
-  min-height: 400px;
+  min-height: 410px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(120deg, #1c2334 70%, #232f47 100%);
   position: relative;
   overflow: hidden;
+  margin-top: 80px;
 }
 .bg-texture {
   position: absolute;
@@ -140,14 +165,79 @@ body {
   letter-spacing: 0.1px;
 }
 
+.missao {
+  background: linear-gradient(120deg, #232f47 90%, #1c2334 100%);
+  margin: 48px 0 0 0;
+  padding: 56px 8vw 40px 8vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.missao-content {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+}
+.missao h2 {
+  font-family: 'Playfair Display', serif;
+  color: #eac87b;
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.missao p {
+  font-size: 1.18em;
+  color: #fff;
+  opacity: 0.98;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.contato {
+  background: #232f47;
+  margin: 0;
+  padding: 46px 0 42px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contato-content {
+  max-width: 440px;
+  margin: 0 auto;
+  text-align: center;
+}
+.contato h2 {
+  font-family: 'Playfair Display', serif;
+  color: #eac87b;
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+.contato ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.09em;
+}
+.contato ul li {
+  margin-bottom: 8px;
+}
+.contato a {
+  color: #eac87b;
+  text-decoration: none;
+  transition: color 0.18s;
+}
+.contato a:hover {
+  color: #fff2cd;
+}
+
 footer {
   text-align: center;
-  padding: 34px 8px 16px 8px;
+  padding: 24px 8px 16px 8px;
   background: #1c2334;
   font-size: 1em;
   border-top: 1px solid #2a3b57;
   color: #eac87b;
-  margin-top: 70px;
+  margin-top: 0;
   letter-spacing: 0.6px;
 }
 
@@ -163,10 +253,17 @@ footer {
     padding: 30px 10px 20px 10px;
   }
   .hero {
-    padding-top: 20px;
+    padding-top: 0;
     min-height: 280px;
   }
-  .brand { font-size: 1.3em; }
-  .hero h1 { font-size: 1.3em; }
-  .topbar { padding: 20px 10px 10px 10px; }
+  .brand { font-size: 1.2em; }
+  .hero h1 { font-size: 1.1em; }
+  .topbar { padding: 10px 10px 10px 10px; }
+}
+
+@media (max-width: 600px) {
+  .topbar { flex-direction: column; align-items: flex-start; gap: 4px; padding: 8px 8px; }
+  .topbar nav { gap: 20px; }
+  .hero-content { padding: 24px 0 10px 0; }
+  .missao, .contato { padding: 36px 4vw 24px 4vw; }
 }
