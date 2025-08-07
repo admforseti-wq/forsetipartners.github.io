@@ -1,14 +1,13 @@
 body {
   margin: 0;
   font-family: 'Inter', Arial, sans-serif;
-  background: #1c2741;
+  background: #1c2334;
   color: #fff;
 }
 
-/* Menu Fixo */
 nav {
   width: 100%;
-  background: rgba(16, 23, 36, 0.96);
+  background: rgba(16, 23, 36, 0.97);
   color: #eac87b;
   position: fixed;
   top: 0; left: 0;
@@ -45,33 +44,43 @@ nav ul li a:hover {
   color: #eac87b;
 }
 
-/* Hero Section */
 .hero {
-  .hero {
-  min-height: 410px;
+  min-height: 460px;
   display: flex;
   align-items: center;
   justify-content: center;
   padding-top: 90px;
-  background: 
-    linear-gradient(120deg, #1c2741 70%, #232f47 100%);
+  padding-bottom: 60px;
+  background: linear-gradient(120deg, #1c2334 70%, #232f47 100%);
   position: relative;
+  overflow: hidden;
 }
-.hero::before {
-  content: "";
+.marca-dagua {
   position: absolute;
-  inset: 0;
-  z-index: 0;
-  /* SVG ou PNG de linhas douradas como overlay */
-  background: url('linhas-douradas.png') center center no-repeat;
-  background-size: cover;
-  opacity: 0.13;
+  left: 50%;
+  top: 53%;
+  transform: translate(-50%,-50%);
+  width: 390px;
+  max-width: 80vw;
+  opacity: 0.10;
+  z-index: 1;
+  pointer-events: none;
+  filter: blur(0.5px);
+}
+.gold-lines {
+  position: absolute;
+  left: 0; top: 0;
+  width: 100vw; height: 100%;
+  z-index: 2;
   pointer-events: none;
 }
 .hero-content {
   position: relative;
-  z-index: 2;
-  /* ... */
+  z-index: 3;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 0 10px 0;
 }
 .hero h1 {
   font-family: 'Playfair Display', serif;
@@ -89,7 +98,7 @@ nav ul li a:hover {
 }
 .btn-gold {
   background: #eac87b;
-  color: #1c2741;
+  color: #1c2334;
   font-weight: bold;
   padding: 15px 36px;
   border: none;
@@ -103,29 +112,29 @@ nav ul li a:hover {
 }
 .btn-gold:hover {
   background: #fff2cd;
-  color: #1c2741;
+  color: #1c2334;
   transform: scale(1.04);
 }
 
-/* Soluções Cards */
+/* Cards */
 .solucoes {
   display: flex;
-  gap: 36px;
+  gap: 48px;
   justify-content: center;
   align-items: stretch;
   margin: 80px auto 0 auto;
-  max-width: 1000px;
+  max-width: 1200px;
   padding: 16px;
   z-index: 2;
 }
 .card {
-  background: rgba(28, 39, 65, 0.97);
-  border: 2px solid #eac87b55;
-  border-radius: 20px;
+  background: rgba(28, 39, 65, 0.96);
+  border: 2px solid #eac87b44;
+  border-radius: 22px;
   box-shadow: 0 6px 32px #131b2a33;
-  padding: 40px 30px 32px 30px;
-  max-width: 340px;
-  flex: 1 1 280px;
+  padding: 44px 34px 32px 34px;
+  max-width: 380px;
+  flex: 1 1 320px;
   text-align: center;
   color: #fff;
   display: flex;
@@ -134,8 +143,8 @@ nav ul li a:hover {
   transition: transform 0.22s, box-shadow 0.22s;
 }
 .card:hover {
-  transform: translateY(-8px) scale(1.035);
-  box-shadow: 0 12px 36px #eac87b22, 0 2px 24px #131b2a33;
+  transform: translateY(-8px) scale(1.045);
+  box-shadow: 0 14px 40px #eac87b22, 0 2px 26px #131b2a33;
   border-color: #eac87b;
 }
 .card .icon {
@@ -144,23 +153,22 @@ nav ul li a:hover {
 }
 .card h2 {
   color: #eac87b;
-  font-size: 1.23em;
+  font-size: 1.27em;
   font-weight: 700;
   margin: 0 0 10px 0;
   font-family: 'Playfair Display', serif;
 }
 .card p {
   color: #fff;
-  font-size: 1.05em;
+  font-size: 1.08em;
   margin-bottom: 0;
   letter-spacing: 0.1px;
 }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 34px 8px 16px 8px;
-  background: #1c2741;
+  background: #1c2334;
   font-size: 1em;
   border-top: 1px solid #2a3b57;
   color: #eac87b;
@@ -168,11 +176,11 @@ footer {
   letter-spacing: 0.6px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .solucoes {
     flex-direction: column;
     gap: 18px;
-    margin-top: 32px;
+    margin-top: 36px;
   }
   .card {
     max-width: 95vw;
@@ -181,109 +189,7 @@ footer {
   }
   .hero {
     padding-top: 74px;
-    min-height: 340px;
+    min-height: 300px;
   }
   .hero h1 { font-size: 2.1em; }
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background: #182644;
-  min-height: 100vh;
-  position: relative;
-  color: #fff;
-}
-.bg {
-  background: url('bg-logo-perceptivel.png') no-repeat center center;
-  background-size: 60vw auto;
-  opacity: 0.13;
-  position: fixed;
-  left: 0; top: 0; width: 100vw; height: 100vh;
-  z-index: 0;
-  pointer-events: none;
-}
-header {
-  text-align: center;
-  padding: 50px 10px 15px 10px;
-  z-index: 2;
-  position: relative;
-}
-h1 {
-  color: #eac87b;
-  font-family: 'Georgia', serif;
-  letter-spacing: 2px;
-  font-size: 2.8em;
-  font-weight: bold;
-  margin: 0 0 10px 0;
-  text-shadow: 0 3px 18px #2227;
-}
-.slogan {
-  color: #eac87b;
-  font-size: 1.22em;
-  font-style: italic;
-  margin-bottom: 0;
-  letter-spacing: 0.5px;
-}
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 36px;
-  justify-content: center;
-  max-width: 980px;
-  margin: 60px auto 0 auto;
-  z-index: 2;
-  position: relative;
-}
-.card {
-  background: rgba(16, 28, 46, 0.98);
-  border: 2px solid #eac87b55;
-  border-radius: 18px;
-  box-shadow: 0 5px 32px #0d172750;
-  padding: 36px 32px 28px 32px;
-  max-width: 320px;
-  flex: 1 1 270px;
-  text-align: center;
-  color: #fff;
-  transition: transform 0.2s;
-}
-.card:hover {
-  transform: translateY(-5px) scale(1.03);
-  box-shadow: 0 10px 40px #eac87b33;
-  border-color: #eac87b;
-}
-.card-icon {
-  font-size: 2.8em;
-  margin-bottom: 10px;
-  color: #eac87b;
-  filter: drop-shadow(0 2px 6px #eac87b44);
-}
-h2 {
-  color: #eac87b;
-  font-size: 1.3em;
-  margin-top: 8px;
-}
-footer {
-  text-align: center;
-  padding: 24px 8px 16px 8px;
-  background: #1a253a;
-  font-size: 0.9em;
-  border-top: 1px solid #2a3b57;
-  margin-top: 70px;
-  color: #eac87b;
-  z-index: 2;
-  position: relative;
-}
-@media (max-width: 800px) {
-  .cards {
-    flex-direction: column;
-    gap: 18px;
-    margin-top: 25px;
-  }
-  .card {
-    max-width: 95vw;
-    padding: 30px 10px 20px 10px;
-  }
-  header { padding: 36px 5px 10px 5px; }
 }
