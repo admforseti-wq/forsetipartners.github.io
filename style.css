@@ -1,12 +1,13 @@
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #0b2447;
-  color: white;
-  text-align: center;
+  font-family: 'Source Serif 4', 'Merriweather', Georgia, serif;
+  background-color: #08182b;
+  color: #f5f5f7;
   min-height: 100vh;
+  text-align: center;
   position: relative;
+  overflow-x: hidden;
 }
 .watermark {
   position: fixed;
@@ -16,147 +17,73 @@ body {
   max-width: 90vw;
   height: 600px;
   max-height: 90vh;
-  opacity: 0.12;
+  opacity: 0.10;
   z-index: 0;
   background: url('logo-forseti.jpeg') no-repeat center center;
   background-size: contain;
   transform: translate(-50%, -50%);
   pointer-events: none;
+  filter: blur(0.2px);
 }
 header {
   position: relative;
-  z-index: 1;
-  background: transparent;
-  padding: 40px 20px 15px 20px;
+  z-index: 2;
+  padding: 105px 8vw 70px 8vw;
+  background: none;
 }
-header h1 {
+h1 {
   font-size: 2.7em;
-  margin-bottom: 12px;
-  font-weight: bold;
+  font-family: 'Source Serif 4', 'Merriweather', Georgia, serif;
+  font-weight: 700;
   letter-spacing: 2px;
+  color: #fff;
+  text-shadow: 0 2px 14px #09142a, 0 0px 2px #fff4;
+  margin-bottom: 18px;
+  margin-top: 0;
 }
-header p {
-  font-size: 1.17em;
-  margin-bottom: 22px;
+.subtitulo {
+  font-family: 'Merriweather', 'Source Serif 4', Georgia, serif;
+  color: #ffecb3;
+  font-size: 1.35em;
+  margin-bottom: 44px;
+  text-shadow: 0 2px 10px #09142a;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.buttons {
+  margin-top: 10px;
+  z-index: 3;
+  position: relative;
 }
 .buttons button {
-  background-color: #fbbf24;
+  background: linear-gradient(90deg, #fbbf24 70%, #f3e18a 100%);
   color: #19376d;
-  padding: 12px 26px;
-  margin: 10px;
-  border-radius: 8px;
-  border: none;
   font-weight: bold;
-  font-size: 1.07em;
-  box-shadow: 0 2px 8px #081c3630;
-  transition: background 0.18s;
+  font-size: 1.09em;
+  border-radius: 10px;
+  border: none;
+  margin: 0 18px;
+  padding: 18px 44px;
   cursor: pointer;
+  box-shadow: 0 2px 20px #0002, 0 0px 6px #fff5;
+  text-shadow: 0 1px 6px #fefefe;
+  transition: transform 0.14s, box-shadow 0.14s, filter 0.12s;
+  outline: none;
+  border-bottom: 2.5px solid #dcc95d;
+  filter: brightness(1.02);
 }
 .buttons button:hover {
-  background-color: #ffc857;
-}
-section {
-  padding: 48px 10px;
-  z-index: 1;
-  position: relative;
-}
-.sobre h2,
-.diferenciais h2,
-.personalizados h2 {
-  color: #fbbf24;
-  font-size: 2em;
-  margin-bottom: 20px;
-}
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 14px;
-}
-.grid div {
-  background-color: #19376d;
-  padding: 15px 28px;
-  border-radius: 10px;
-  font-weight: bold;
-  font-size: 1.02em;
-  min-width: 210px;
-  box-shadow: 0 2px 8px #081c3633;
-}
-.personalizados {
-  background-color: #102548;
-  border-radius: 16px;
-  margin: 30px 6vw;
-}
-footer {
-  background-color: #081c36;
-  padding: 23px 10px;
-  font-size: 1em;
-  margin-top: 34px;
-  color: #e4e4e4;
-  z-index: 2;
-  position: relative;
-}
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 999;
-  left: 0; top: 0;
-  width: 100vw; height: 100vh;
-  background: rgba(16,27,52,0.86);
-  justify-content: center; align-items: center;
-}
-.modal-content {
-  background: #f4f4f7;
-  color: #222;
-  border-radius: 16px;
-  padding: 30px 22px 20px 22px;
-  width: 95vw;
-  max-width: 370px;
-  position: relative;
-  box-shadow: 0 10px 48px #00133c70;
-  text-align: left;
-}
-.close {
-  position: absolute;
-  top: 10px; right: 20px;
-  color: #555; font-size: 28px; font-weight: bold; cursor: pointer;
-}
-.modal-content h3 { color: #19376d; text-align: center; }
-#contactForm label { display: block; margin: 16px 0 6px; font-weight: bold; color: #19376d; }
-#contactForm input, #contactForm textarea {
-  width: 100%; padding: 9px 8px; border-radius: 5px; border: 1px solid #bcc6d8;
-  margin-bottom: 8px; font-size: 1em;
-}
-#contactForm button {
-  width: 100%;
-  background: #fbbf24;
-  color: #19376d;
-  border: none;
-  padding: 13px;
-  border-radius: 7px;
-  font-weight: bold;
-  font-size: 1.04em;
-  margin-top: 16px;
-  transition: background 0.18s;
-  cursor: pointer;
-}
-#contactForm button:hover {
-  background: #ffc857;
-}
-#formSuccess {
-  text-align: center;
-  color: #147742;
-  font-weight: bold;
-  font-size: 1.04em;
-}
-#formSuccess a {
-  color: #25D366;
-  text-decoration: underline;
+  background: linear-gradient(90deg, #ffe082 60%, #ffd700 100%);
+  color: #011024;
+  filter: brightness(1.14);
+  transform: scale(1.04) translateY(-2px);
+  box-shadow: 0 6px 28px #0002, 0 0px 16px #ffe08280;
 }
 @media (max-width: 650px) {
   .watermark { width: 97vw; height: 97vw; }
-  header h1 { font-size: 1.4em; }
-  .grid { flex-direction: column; gap: 9px; }
-  section { padding: 33px 3vw; }
-  .personalizados { margin: 20px 0; padding: 30px 3vw; }
+  header { padding: 70px 2vw 30px 2vw; }
+  h1 { font-size: 1.4em; }
+  .subtitulo { font-size: 1em; }
+  .buttons button { margin: 10px 0; padding: 14px 24px; font-size: 1em; width: 92vw; max-width: 360px;}
 }
