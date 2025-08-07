@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #182644;
+  min-height: 100vh;
+  position: relative;
+  color: #fff;
+}
+.bg {
+  background: url('bg-logo-perceptivel.png') no-repeat center center;
+  background-size: 60vw auto;
+  opacity: 0.13;
+  position: fixed;
+  left: 0; top: 0; width: 100vw; height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+header {
+  text-align: center;
+  padding: 50px 10px 15px 10px;
+  z-index: 2;
+  position: relative;
+}
+h1 {
+  color: #eac87b;
+  font-family: 'Georgia', serif;
+  letter-spacing: 2px;
+  font-size: 2.8em;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+  text-shadow: 0 3px 18px #2227;
+}
+.slogan {
+  color: #eac87b;
+  font-size: 1.22em;
+  font-style: italic;
+  margin-bottom: 0;
+  letter-spacing: 0.5px;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 36px;
+  justify-content: center;
+  max-width: 980px;
+  margin: 60px auto 0 auto;
+  z-index: 2;
+  position: relative;
+}
+.card {
+  background: rgba(16, 28, 46, 0.98);
+  border: 2px solid #eac87b55;
+  border-radius: 18px;
+  box-shadow: 0 5px 32px #0d172750;
+  padding: 36px 32px 28px 32px;
+  max-width: 320px;
+  flex: 1 1 270px;
+  text-align: center;
+  color: #fff;
+  transition: transform 0.2s;
+}
+.card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 10px 40px #eac87b33;
+  border-color: #eac87b;
+}
+.card-icon {
+  font-size: 2.8em;
+  margin-bottom: 10px;
+  color: #eac87b;
+  filter: drop-shadow(0 2px 6px #eac87b44);
+}
+h2 {
+  color: #eac87b;
+  font-size: 1.3em;
+  margin-top: 8px;
+}
+footer {
+  text-align: center;
+  padding: 24px 8px 16px 8px;
+  background: #1a253a;
+  font-size: 0.9em;
+  border-top: 1px solid #2a3b57;
+  margin-top: 70px;
+  color: #eac87b;
+  z-index: 2;
+  position: relative;
+}
+@media (max-width: 800px) {
+  .cards {
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 25px;
+  }
+  .card {
+    max-width: 95vw;
+    padding: 30px 10px 20px 10px;
+  }
+  header { padding: 36px 5px 10px 5px; }
+}
