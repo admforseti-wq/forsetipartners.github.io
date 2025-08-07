@@ -8,34 +8,83 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- MENU FIXO -->
   <header class="topbar">
-  <img src="logo-arvore-forseti.png" alt="Logo Forseti" class="logo-topo">
-  <div class="brand">FORSETI PARTNERS</div>
-</header>
+    <img src="logo-arvore-forseti.png" alt="Logo Forseti" class="logo-topo">
+    <div class="brand">FORSETI PARTNERS</div>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#solucoes">Soluções</a>
+      <a href="#missao">Missão</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <!-- HERO INSTITUCIONAL -->
+  <section class="hero" id="sobre">
+    <div class="bg-texture"></div>
+    <svg class="gold-lines" width="100%" height="100%" viewBox="0 0 1440 420" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0 200 Q360 100 720 200 T1440 200" stroke="#eac87b55" stroke-width="3" fill="none"/>
+      <path d="M0 320 Q600 420 1440 320" stroke="#eac87b33" stroke-width="2" fill="none"/>
+      <path d="M0 100 Q800 20 1440 100" stroke="#eac87b22" stroke-width="2" fill="none"/>
+      <path d="M240 0 Q800 250 1200 0" stroke="#eac87b44" stroke-width="1.5" fill="none"/>
+    </svg>
+    <div class="hero-content">
+      <h1>Seu parceiro estratégico em tecnologia e inovação.</h1>
+      <p>Estruturando negócios com inteligência, tecnologia e excelência.</p>
+      <a href="#solucoes" class="btn-gold">Conheça nossos serviços</a>
+    </div>
+  </section>
+
+  <!-- SOLUÇÕES -->
   <section class="solucoes" id="solucoes">
-  <div class="card">
-    <div class="icon">
-      <!-- Ícone Engrenagem SVG -->
-      <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="23" cy="23" r="13" stroke="#eac87b" stroke-width="2.5"/>
-        <path d="M23 8v4M23 34v4M34 23h4M8 23h4M31.9 14.1l2.8-2.8M14.1 31.9l-2.8 2.8M31.9 31.9l2.8 2.8M14.1 14.1l-2.8-2.8" stroke="#eac87b" stroke-width="2"/>
-      </svg>
+    <div class="card">
+      <div class="icon">
+        <!-- Engrenagem dourada -->
+        <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="23" cy="23" r="13" stroke="#eac87b" stroke-width="2.5"/>
+          <path d="M23 8v4M23 34v4M34 23h4M8 23h4M31.9 14.1l2.8-2.8M14.1 31.9l-2.8 2.8M31.9 31.9l2.8 2.8M14.1 14.1l-2.8-2.8" stroke="#eac87b" stroke-width="2"/>
+        </svg>
+      </div>
+      <h2>Fábrica de Software Sob Demanda</h2>
+      <p>Desenvolvimento de soluções digitais sob medida para negócios visionários. Do seu jeito. No seu tempo. Com a excelência Forseti.</p>
     </div>
-    <h2>Fábrica de Software Sob Demanda</h2>
-    <p>Desenvolvimento de soluções digitais sob medida para negócios visionários. Do seu jeito. No seu tempo. Com a excelência Forseti.</p>
-  </div>
-  <div class="card">
-    <div class="icon">
-      <!-- Ícone Dashboard SVG -->
-      <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="12" y="18" width="22" height="14" rx="3" stroke="#eac87b" stroke-width="2"/>
-        <path d="M17 27v-5M23 29v-7M29 25v-3" stroke="#eac87b" stroke-width="2" stroke-linecap="round"/>
-      </svg>
+    <div class="card">
+      <div class="icon">
+        <!-- Dashboard dourado -->
+        <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="12" y="18" width="22" height="14" rx="3" stroke="#eac87b" stroke-width="2"/>
+          <path d="M17 27v-5M23 29v-7M29 25v-3" stroke="#eac87b" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <h2>Plataforma de Leilões & Dashboard</h2>
+      <p>Acesso ao melhor do mercado de leilões: imóveis, veículos e ativos. Dashboard robusto, análise de oportunidades e tecnologia proprietária. A maneira mais eficiente e acessível de conquistar seu patrimônio.</p>
     </div>
-    <h2>Plataforma de Leilões & Dashboard</h2>
-    <p>Acesso ao melhor do mercado de leilões: imóveis, veículos e ativos. Dashboard robusto, análise de oportunidades e tecnologia proprietária. A maneira mais eficiente e acessível de conquistar seu patrimônio.</p>
-  </div>
-</section>
+  </section>
+
+  <!-- MISSÃO / VALORES -->
+  <section class="missao" id="missao">
+    <div class="missao-content">
+      <h2>Nossa Missão</h2>
+      <p>
+        Nossa missão é transformar negócios por meio da tecnologia, promovendo transparência, eficiência e resultados sólidos para nossos clientes.<br>
+        Acreditamos que a confiança e a inovação caminham lado a lado, e por isso, oferecemos soluções digitais que conectam pessoas e oportunidades, democratizando o acesso a mercados estratégicos com ética e excelência.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="contato" id="contato">
+    <div class="contato-content">
+      <h2>Contato</h2>
+      <ul>
+        <li><strong>E-mail:</strong> <a href="mailto:anderson@forsetipartners.com">anderson@forsetipartners.com</a></li>
+        <li><strong>Telefone:</strong> <a href="tel:+5511985730644">(11) 98573-0644</a></li>
+        <li><strong>CNPJ:</strong> 61.908.472/0001-31</li>
+      </ul>
+    </div>
+  </section>
+
   <footer>
     &copy; 2025 Forseti Partners • Todos os direitos reservados
   </footer>
