@@ -216,65 +216,76 @@ footer {
   margin-top: 0;
   border-top: 1px solid #2a3b57;
 }
+
 .contato-card {
-  background: #222a3e;
-  border-radius: 20px;
+  background: #232b41;
+  border-radius: 18px;
   box-shadow: 0 2px 20px #eac87b18;
-  margin: 38px auto 12px auto;
-  padding: 38px 30px 24px 30px;
-  max-width: 420px;
-  min-width: 220px;
+  margin: 48px auto 0 auto;
+  padding: 28px 18px 18px 18px;
+  max-width: 370px;
+  min-width: 200px;
   text-align: center;
+  font-size: 1em;
+  position: relative;
 }
+
 .contato-card h3 {
   font-family: 'Playfair Display', serif;
   color: #eac87b;
-  font-size: 1.3em;
-  margin-bottom: 16px;
+  font-size: 1.13em;
+  margin-bottom: 13px;
   font-weight: 700;
+  letter-spacing: 1px;
 }
+
 .contato-card ul {
   list-style: none;
   padding: 0;
-  margin: 0 0 10px 0;
-  font-size: 1.10em;
+  margin: 0 0 5px 0;
+  font-size: 1em;
 }
+
 .contato-card ul li {
-  margin-bottom: 9px;
-  color: #fff;
+  margin-bottom: 7px;
+  color: #eac87bcc;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 8px;
+  font-size: 1em;
 }
+
 .contato-card a {
   color: #eac87b;
   text-decoration: none;
   transition: color 0.17s;
+  font-weight: 500;
+  font-size: 1em;
 }
+
 .contato-card a:hover {
   color: #fff2cd;
 }
+
 .contato-icone {
-  font-size: 1.19em;
+  font-size: 1.10em;
   color: #eac87b;
   margin-right: 2px;
 }
+
 .footer-credits {
-  margin-top: 18px;
+  margin-top: 16px;
   color: #eac87b;
-  font-size: 1em;
-  opacity: 0.98;
-  letter-spacing: 0.6px;
+  font-size: 0.95em;
+  opacity: 0.97;
+  letter-spacing: 0.4px;
 }
 
-/* Responsividade */
-@media (max-width: 1000px) {
-  .solucoes {
-    flex-direction: column;
-    gap: 22px;
-    margin-top: 36px;
-  }
+@media (max-width: 700px) {
+  .contato-card { max-width: 97vw; padding: 16px 5vw 12px 5vw; }
+}
+
   .card {
     max-width: 95vw;
     margin: 0 auto;
