@@ -4,23 +4,22 @@ body {
   background: #1c2334;
   color: #fff;
 }
-
 .topbar {
   display: flex;
   align-items: center;
-  gap: 20px;
-  padding: 26px 48px 18px 48px;
+  gap: 16px;
+  padding: 24px 48px 12px 48px;
   background: transparent;
 }
 .logo-topo {
-  width: 54px;
-  height: 54px;
+  width: 52px;
+  height: 52px;
   object-fit: contain;
-  opacity: 0.93;
+  opacity: 0.96;
 }
 .brand {
   font-family: 'Playfair Display', serif;
-  font-size: 2.1em;
+  font-size: 2em;
   font-weight: 700;
   color: #eac87b;
   letter-spacing: 2px;
