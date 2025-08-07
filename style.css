@@ -1,0 +1,116 @@
+/* Base */
+:root{
+  --azul1:#1c2334;
+  --azul2:#232f47;
+  --dourado:#eac87b;
+  --dourado-weak:#eac87bcc;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:'Inter',Arial,sans-serif;
+  background:var(--azul1);
+  color:#fff;
+  scroll-behavior:smooth;
+}
+
+/* Topo */
+.topbar{
+  position:fixed;inset:auto 0 0 0;top:0;left:0;right:0;
+  height:72px;
+  background:rgba(28,35,52,0.97);
+  display:flex;align-items:center;gap:18px;
+  padding:10px 48px;
+  border-bottom:1px solid #203051;
+  z-index:1000;
+}
+.topbar-left{display:flex;align-items:center;gap:14px}
+.logo-topo{max-height:50px;height:auto;width:auto;display:block}
+.brand{
+  font-family:'Playfair Display',serif;
+  font-size:1.6rem;letter-spacing:2px;color:var(--dourado);font-weight:700
+}
+.menu{margin-left:auto;display:flex;gap:30px}
+.menu a{
+  color:#fff;text-decoration:none;font-weight:600;
+  border-bottom:2px solid transparent;padding-bottom:3px;
+  transition:color .18s,border-color .18s
+}
+.menu a:hover{color:var(--dourado);border-color:var(--dourado)}
+
+/* Hero */
+.hero{
+  margin-top:72px; /* compensa header fixo */
+  min-height:420px;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(120deg,var(--azul1) 70%,var(--azul2) 100%);
+  position:relative;overflow:hidden
+}
+.bg-texture{
+  position:absolute;inset:0;background:url('https://www.transparenttextures.com/patterns/diamond-upholstery.png');
+  opacity:.13;z-index:0;pointer-events:none
+}
+.gold-lines{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+.hero-content{position:relative;z-index:2;text-align:center;max-width:900px;padding:64px 4vw}
+.hero h1{
+  font-family:'Playfair Display',serif;color:var(--dourado);
+  font-size:2.2rem;margin:0 0 14px 0;text-shadow:0 4px 14px #131b2a50
+}
+.hero p{font-size:1.18rem;color:var(--dourado-weak);margin:0 0 28px 0}
+.btn-gold{
+  background:var(--dourado);color:var(--azul1);font-weight:700;
+  border-radius:10px;padding:14px 28px;text-decoration:none;
+  box-shadow:0 6px 18px #eac87b2a;display:inline-block;transition:transform .18s,opacity .18s
+}
+.btn-gold:hover{transform:translateY(-2px) scale(1.03);opacity:.95}
+
+/* Cards Soluções */
+.solucoes{max-width:1200px;margin:54px auto 0 auto;padding:0 16px;display:flex;gap:42px;justify-content:center;align-items:stretch}
+.card{
+  flex:1 1 360px;max-width:480px;text-align:center;color:#fff;
+  background:rgba(28,39,65,.98);
+  border:2px solid #eac87b44;border-radius:22px;
+  box-shadow:0 6px 32px #131b2a33;padding:42px 32px 30px 32px;
+  transition:transform .2s,box-shadow .2s,border-color .2s
+}
+.card:hover{transform:translateY(-6px);box-shadow:0 14px 40px #eac87b22,0 2px 26px #131b2a33;border-color:var(--dourado)}
+.card .icon{margin-bottom:16px}
+.card h2{font-family:'Playfair Display',serif;color:var(--dourado);font-size:1.22rem;margin:0 0 10px 0}
+.card p{margin:0;font-size:1.05rem}
+
+/* Missão quadro */
+.missao-quad{background:linear-gradient(120deg,var(--azul2) 92%,var(--azul1) 100%);padding:56px 6vw}
+.missao-card{
+  max-width:820px;margin:0 auto;background:#1d273d;border-radius:28px;
+  box-shadow:0 10px 48px #eac87b22,0 2px 30px #131b2a33;
+  padding:38px 44px;border:3.5px double #eac87b
+}
+.moldura-missao h2{font-family:'Playfair Display',serif;color:var(--dourado);font-size:1.6rem;text-align:center;margin:0 0 16px 0}
+.moldura-missao p{font-size:1.08rem;line-height:1.6;margin:0;text-align:center}
+
+/* Footer / Contato */
+footer{background:var(--azul1);border-top:1px solid #2a3b57}
+.contato-card{
+  max-width:520px;margin:38px auto 18px auto;background:#222a3e;border-radius:18px;
+  box-shadow:0 2px 20px #eac87b18;padding:26px 22px 18px 22px;text-align:center
+}
+.contato-card h3{font-family:'Playfair Display',serif;color:var(--dourado);font-size:1.2rem;margin:0 0 10px 0}
+.contato-card ul{list-style:none;margin:0 0 6px 0;padding:0}
+.contato-card li{display:flex;gap:10px;align-items:center;justify-content:center;margin:7px 0;color:#eac87bcc}
+.contato-icone{color:var(--dourado);font-size:1.1rem}
+.contato-card a{color:var(--dourado);text-decoration:none}
+.contato-card a:hover{color:#fff2cd}
+.footer-credits{margin-top:14px;color:var(--dourado);font-size:.95rem;letter-spacing:.4px}
+
+/* Responsivo */
+@media (max-width:1000px){
+  .solucoes{flex-direction:column;gap:22px}
+  .card{max-width:96vw;margin:0 auto}
+}
+@media (max-width:700px){
+  .brand{display:none}
+  .menu{gap:18px}
+  .logo-topo{max-height:44px}
+  .hero h1{font-size:1.5rem}
+  .hero p{font-size:1rem}
+  .contato-card{max-width:92vw}
+}
