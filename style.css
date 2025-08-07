@@ -5,95 +5,72 @@ body {
   color: #fff;
 }
 
-nav {
-  width: 100%;
-  background: rgba(16, 23, 36, 0.97);
-  color: #eac87b;
-  position: fixed;
-  top: 0; left: 0;
-  height: 62px;
-  z-index: 100;
+.topbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 48px;
-  box-shadow: 0 2px 18px #131b2a22;
+  gap: 20px;
+  padding: 26px 48px 18px 48px;
+  background: transparent;
 }
-nav .logo {
+.logo-topo {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+  opacity: 0.93;
+}
+.brand {
   font-family: 'Playfair Display', serif;
-  font-size: 1.4em;
-  letter-spacing: 1px;
-  font-weight: bold;
+  font-size: 2.1em;
+  font-weight: 700;
   color: #eac87b;
-}
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 36px;
-  margin: 0;
-  padding: 0;
-}
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1em;
-  font-weight: 500;
-  transition: color 0.2s;
-}
-nav ul li a:hover {
-  color: #eac87b;
+  letter-spacing: 2px;
+  margin-top: 3px;
 }
 
 .hero {
-  min-height: 460px;
+  min-height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 90px;
-  padding-bottom: 60px;
   background: linear-gradient(120deg, #1c2334 70%, #232f47 100%);
   position: relative;
   overflow: hidden;
 }
-.marca-dagua {
+.bg-texture {
   position: absolute;
-  left: 50%;
-  top: 53%;
-  transform: translate(-50%,-50%);
-  width: 390px;
-  max-width: 80vw;
-  opacity: 0.10;
-  z-index: 1;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/diamond-upholstery.png');
+  opacity: 0.13;
+  z-index: 0;
   pointer-events: none;
-  filter: blur(0.5px);
 }
 .gold-lines {
   position: absolute;
   left: 0; top: 0;
   width: 100vw; height: 100%;
-  z-index: 2;
+  z-index: 1;
   pointer-events: none;
 }
 .hero-content {
   position: relative;
-  z-index: 3;
+  z-index: 2;
   text-align: center;
   max-width: 900px;
   margin: 0 auto;
-  padding: 40px 0 10px 0;
+  padding: 64px 0 28px 0;
 }
 .hero h1 {
   font-family: 'Playfair Display', serif;
   color: #eac87b;
-  font-size: 2.7em;
+  font-size: 2.2em;
   margin-bottom: 14px;
   font-weight: 700;
   text-shadow: 0 4px 14px #131b2a50;
 }
 .hero p {
-  font-size: 1.25em;
+  font-size: 1.23em;
   color: #eac87bcc;
-  margin-bottom: 32px;
+  margin-bottom: 30px;
   text-shadow: 0 2px 6px #1c274199;
 }
 .btn-gold {
@@ -103,7 +80,7 @@ nav ul li a:hover {
   padding: 15px 36px;
   border: none;
   border-radius: 8px;
-  font-size: 1.1em;
+  font-size: 1.13em;
   letter-spacing: 1px;
   cursor: pointer;
   box-shadow: 0 4px 18px #eac87b22;
@@ -116,13 +93,12 @@ nav ul li a:hover {
   transform: scale(1.04);
 }
 
-/* Cards */
 .solucoes {
   display: flex;
   gap: 48px;
   justify-content: center;
   align-items: stretch;
-  margin: 80px auto 0 auto;
+  margin: 60px auto 0 auto;
   max-width: 1200px;
   padding: 16px;
   z-index: 2;
@@ -153,7 +129,7 @@ nav ul li a:hover {
 }
 .card h2 {
   color: #eac87b;
-  font-size: 1.27em;
+  font-size: 1.18em;
   font-weight: 700;
   margin: 0 0 10px 0;
   font-family: 'Playfair Display', serif;
@@ -179,7 +155,7 @@ footer {
 @media (max-width: 1000px) {
   .solucoes {
     flex-direction: column;
-    gap: 18px;
+    gap: 22px;
     margin-top: 36px;
   }
   .card {
@@ -188,8 +164,10 @@ footer {
     padding: 30px 10px 20px 10px;
   }
   .hero {
-    padding-top: 74px;
-    min-height: 300px;
+    padding-top: 20px;
+    min-height: 280px;
   }
-  .hero h1 { font-size: 2.1em; }
+  .brand { font-size: 1.3em; }
+  .hero h1 { font-size: 1.3em; }
+  .topbar { padding: 20px 10px 10px 10px; }
 }
