@@ -6,20 +6,22 @@ body {
   scroll-behavior: smooth;
 }
 
+/* Topbar e logo */
 .topbar {
   position: fixed;
   top: 0; left: 0; width: 100vw;
-  background: rgba(28,35,52,0.95);
+  background: rgba(28,35,52,0.97);
   display: flex;
   align-items: center;
   z-index: 100;
-  gap: 22px;
-  padding: 16px 48px 14px 48px;
+  gap: 18px;
+  padding: 14px 48px 12px 40px;
   box-shadow: 0 2px 18px #131b2a22;
+  border-bottom: 1.5px solid #eac87b25;
 }
 .logo-topo {
-  width: 50px;
-  height: 50px;
+  width: 56px;
+  height: 56px;
   object-fit: contain;
   opacity: 0.98;
 }
@@ -33,32 +35,35 @@ body {
 .topbar nav {
   margin-left: auto;
   display: flex;
-  gap: 36px;
+  gap: 38px;
 }
 .topbar nav a {
   color: #fff;
   text-decoration: none;
-  font-size: 1.05em;
+  font-size: 1.08em;
   font-weight: 600;
-  letter-spacing: 0.5px;
-  transition: color 0.18s;
-  padding: 5px 0;
+  letter-spacing: 0.6px;
+  transition: color 0.19s, border-bottom 0.19s;
+  padding: 5px 0 2px 0;
   border-bottom: 2px solid transparent;
+  font-family: 'Inter', Arial, sans-serif;
 }
-.topbar nav a:hover, .topbar nav a.active {
+.topbar nav a:hover,
+.topbar nav a.active {
   color: #eac87b;
   border-bottom: 2px solid #eac87b;
 }
 
+/* Hero section */
 .hero {
-  min-height: 410px;
+  min-height: 430px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(120deg, #1c2334 70%, #232f47 100%);
   position: relative;
   overflow: hidden;
-  margin-top: 80px;
+  margin-top: 78px;
 }
 .bg-texture {
   position: absolute;
@@ -81,20 +86,20 @@ body {
   text-align: center;
   max-width: 900px;
   margin: 0 auto;
-  padding: 64px 0 28px 0;
+  padding: 72px 0 34px 0;
 }
 .hero h1 {
   font-family: 'Playfair Display', serif;
   color: #eac87b;
-  font-size: 2.2em;
-  margin-bottom: 14px;
+  font-size: 2.3em;
+  margin-bottom: 15px;
   font-weight: 700;
   text-shadow: 0 4px 14px #131b2a50;
 }
 .hero p {
-  font-size: 1.23em;
+  font-size: 1.25em;
   color: #eac87bcc;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
   text-shadow: 0 2px 6px #1c274199;
 }
 .btn-gold {
@@ -114,12 +119,13 @@ body {
 .btn-gold:hover {
   background: #fff2cd;
   color: #1c2334;
-  transform: scale(1.04);
+  transform: scale(1.045);
 }
 
+/* Cards de Soluções */
 .solucoes {
   display: flex;
-  gap: 48px;
+  gap: 50px;
   justify-content: center;
   align-items: stretch;
   margin: 60px auto 0 auto;
@@ -128,19 +134,19 @@ body {
   z-index: 2;
 }
 .card {
-  background: rgba(28, 39, 65, 0.96);
-  border: 2px solid #eac87b44;
+  background: rgba(28, 39, 65, 0.98);
+  border: 2.5px solid #eac87b44;
   border-radius: 22px;
   box-shadow: 0 6px 32px #131b2a33;
   padding: 44px 34px 32px 34px;
-  max-width: 380px;
+  max-width: 390px;
   flex: 1 1 320px;
   text-align: center;
   color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: transform 0.22s, box-shadow 0.22s;
+  transition: transform 0.22s, box-shadow 0.22s, border-color 0.2s;
 }
 .card:hover {
   transform: translateY(-8px) scale(1.045);
@@ -153,94 +159,116 @@ body {
 }
 .card h2 {
   color: #eac87b;
-  font-size: 1.18em;
+  font-size: 1.20em;
   font-weight: 700;
-  margin: 0 0 10px 0;
+  margin: 0 0 12px 0;
   font-family: 'Playfair Display', serif;
 }
 .card p {
   color: #fff;
-  font-size: 1.08em;
+  font-size: 1.09em;
   margin-bottom: 0;
   letter-spacing: 0.1px;
 }
 
-.missao {
-  background: linear-gradient(120deg, #232f47 90%, #1c2334 100%);
-  margin: 48px 0 0 0;
-  padding: 56px 8vw 40px 8vw;
+/* Missão Quadro */
+.missao-quad {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  background: linear-gradient(120deg, #232f47 92%, #1c2334 100%);
+  padding: 60px 12vw 54px 12vw;
 }
-.missao-content {
-  max-width: 860px;
+.missao-card {
+  background: #1c2334;
+  border: 3.5px double #eac87b;
+  border-radius: 32px;
+  box-shadow: 0 10px 48px #eac87b22, 0 2px 30px #131b2a33;
+  max-width: 700px;
+  width: 100%;
+  padding: 42px 48px 36px 48px;
   margin: 0 auto;
-  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.missao h2 {
+.moldura-missao h2 {
   font-family: 'Playfair Display', serif;
   color: #eac87b;
-  font-size: 2em;
+  font-size: 1.55em;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
+  text-align: center;
 }
-.missao p {
-  font-size: 1.18em;
+.moldura-missao p {
+  font-size: 1.16em;
   color: #fff;
   opacity: 0.98;
-  line-height: 1.5;
-  margin-bottom: 0;
+  line-height: 1.55;
+  text-align: center;
 }
 
-.contato {
-  background: #232f47;
-  margin: 0;
-  padding: 46px 0 42px 0;
+/* Contato */
+footer {
+  background: #1c2334;
+  padding: 0;
+  margin-top: 0;
+  border-top: 1px solid #2a3b57;
+}
+.contato-card {
+  background: #222a3e;
+  border-radius: 20px;
+  box-shadow: 0 2px 20px #eac87b18;
+  margin: 38px auto 12px auto;
+  padding: 38px 30px 24px 30px;
+  max-width: 420px;
+  min-width: 220px;
+  text-align: center;
+}
+.contato-card h3 {
+  font-family: 'Playfair Display', serif;
+  color: #eac87b;
+  font-size: 1.3em;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+.contato-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px 0;
+  font-size: 1.10em;
+}
+.contato-card ul li {
+  margin-bottom: 9px;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
 }
-.contato-content {
-  max-width: 440px;
-  margin: 0 auto;
-  text-align: center;
-}
-.contato h2 {
-  font-family: 'Playfair Display', serif;
-  color: #eac87b;
-  font-size: 1.5em;
-  font-weight: 700;
-  margin-bottom: 18px;
-}
-.contato ul {
-  list-style: none;
-  padding: 0;
-  font-size: 1.09em;
-}
-.contato ul li {
-  margin-bottom: 8px;
-}
-.contato a {
+.contato-card a {
   color: #eac87b;
   text-decoration: none;
-  transition: color 0.18s;
+  transition: color 0.17s;
 }
-.contato a:hover {
+.contato-card a:hover {
   color: #fff2cd;
 }
-
-footer {
-  text-align: center;
-  padding: 24px 8px 16px 8px;
-  background: #1c2334;
-  font-size: 1em;
-  border-top: 1px solid #2a3b57;
+.contato-icone {
+  font-size: 1.19em;
   color: #eac87b;
-  margin-top: 0;
+  margin-right: 2px;
+}
+.footer-credits {
+  margin-top: 18px;
+  color: #eac87b;
+  font-size: 1em;
+  opacity: 0.98;
   letter-spacing: 0.6px;
 }
 
+/* Responsividade */
 @media (max-width: 1000px) {
   .solucoes {
     flex-direction: column;
@@ -252,18 +280,17 @@ footer {
     margin: 0 auto;
     padding: 30px 10px 20px 10px;
   }
-  .hero {
-    padding-top: 0;
-    min-height: 280px;
-  }
-  .brand { font-size: 1.2em; }
-  .hero h1 { font-size: 1.1em; }
-  .topbar { padding: 10px 10px 10px 10px; }
+  .hero-content { padding: 44px 0 14px 0; }
+  .brand { font-size: 1.25em; }
+  .topbar { padding: 10px 12px 8px 10px; }
+  .missao-card { padding: 28px 10px 20px 10px; }
 }
 
 @media (max-width: 600px) {
   .topbar { flex-direction: column; align-items: flex-start; gap: 4px; padding: 8px 8px; }
-  .topbar nav { gap: 20px; }
-  .hero-content { padding: 24px 0 10px 0; }
-  .missao, .contato { padding: 36px 4vw 24px 4vw; }
+  .topbar nav { gap: 14px; }
+  .hero-content { padding: 20px 0 8px 0; }
+  .missao-quad { padding: 26px 1vw 22px 1vw; }
+  .missao-card { padding: 12px 3vw 12px 3vw; }
+  .contato-card { padding: 18px 2vw 14px 2vw; }
 }
